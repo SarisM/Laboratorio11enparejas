@@ -1,21 +1,39 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0 auto; /* El contenedor o lista de im├ígenes debe quedar centrado en el medio de la pantalla */
+	padding: 10px 50px;
 }
 
 #personajes {
-    /* Complete el CSS aqui */
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(230px, 1fr)
+	); /* Los personajes deben distribuirse hacia la derecha. Una vez que un personaje llegue al final de la pantalla y este no alcance a renderizar completamente, se crear├í un salto de l├¡nea autom├ítico. */
+	grid-gap: 1rem; /* Debe haber un espacio de 1 rem entre cada personaje. */
+	margin-top: 20px;
 }
 
 .personaje {
-/* Complete el CSS aqui */
+	border: 1px solid black; /* Cada contenedor del personaje debe tener un borde s├│lido de 1px de color negro */
+	border-radius: 5px;
+	padding: 10px;
+	text-align: center;
 }
-
 .personaje__nombre {
-/* Complete el CSS aqui */
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: red; /* El texto de la imagen debe estar centrado en el contenedor del personaje y debe ser de color rojo. */
 }
 
 .personaje__imagen {
-/* Complete el CSS aqui */
+	width: 200px;
+	height: 200px; /* La imagen debe tener un ancho y alto de 200px. */
+	border-radius: 5px;
+	margin: 0 auto;
 }
